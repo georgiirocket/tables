@@ -1,0 +1,70 @@
+@import "src/assets/styles/fade";
+
+@layer components {
+  .center-container {
+    @apply p-2 grid grid-cols-1 gap-1 place-items-center h-[100dvh];
+  }
+
+  .inside-button {
+    @apply flex justify-center items-center w-[100%] h-[100%];
+  }
+
+  .input-number {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .scroll-hidden {
+    scrollbar-width: none;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .danger-color {
+    color: var(--danger-color);
+  }
+
+  .black-color {
+    color: var(--black);
+  }
+
+  .white-color {
+    color: var(--white);
+  }
+
+  .primary-color {
+    color: var(--primary-color)
+  }
+
+  .gray-color {
+    color: var(--gray-color);
+  }
+
+  .transition-2s {
+    transition: .2s ease-in;
+  }
+
+  .with-fade {
+    @extend %fade;
+  }
+
+  .base-table-layout {
+    height: 100dvh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    display: grid;
+    overflow: hidden;
+    @extend %fade;
+  }
+
+  .with-sunbox {
+    grid-template-rows: auto 1fr auto;
+  }
+}

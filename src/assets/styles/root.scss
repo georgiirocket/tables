@@ -1,0 +1,46 @@
+:root {
+  --ui-bg: #18181B;
+  --white: #fff;
+  --black: black;
+  --main-background: #0f0f11;
+  --text-color: #fbfbfb;
+  --gray-color: #888;
+  --common-hover: #3f3f45;
+  --gray-hover-color: #555;
+  --svg-color: #fbfbfb;
+  --border-color: #232125;
+  --danger-color: #920B3A;
+  --warning-color: #936316;
+  --table-bg: #18181b;
+  --table-header: #27272a;
+  --selection-text: rgb(183, 93, 0);
+  --primary-color: #005BC4;
+  --primary-color-300: #66AAF9;
+  --default-gray: #222226;
+  --viovet-color: #6020A0;
+  --viovet-color-light: #C9A9E9;
+  --success-color: #0E793C;
+  --yellow: #FFD782;
+  --less-red: #FFA181;
+  --green-200: #8DD81C;
+  --light-blue: #cce1ff;
+  --common-progress: #6020A0;
+
+  --toastify-color-light: #18181B !important;
+  --toastify-text-color-light: #fbfbfb !important;
+}
+
+[data-theme='light']  {
+  --ui-bg: #fff;
+  --main-background: #fff;
+  --common-hover: #eeeeef;
+  --text-color: #0f0f11;
+  --svg-color: #3B3C36;
+  --table-bg: #F4F4F5;
+  --table-header: #E4E4E7;
+  --border-color: #DADADE;
+  --common-progress: #005BC4;
+
+  --toastify-color-light: #fff !important;
+  --toastify-text-color-light: #757575 !important;
+}
