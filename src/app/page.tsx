@@ -1,17 +1,17 @@
 import { FC } from 'react';
 
-import Header from '@/common/components/header';
+import BaseTable from './_components/base-table';
 
 /**
  * Page
  * @constructor
  */
-const HomePage: FC = () => {
+const Page: FC = () => {
   return (
-    <main>
-      <Header />
+    <main className="main-container overflow-auto">
+      <BaseTable />
     </main>
   );
 };
 
-export default HomePage;
+export default Page;

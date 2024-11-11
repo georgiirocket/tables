@@ -1,7 +1,7 @@
 'use client';
 
 import { Column } from '@tanstack/table-core';
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { Divider } from '@nextui-org/react';
 
 import ResetButton from './reset-button';
@@ -42,4 +42,4 @@ const FilterBody: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
   );
 };
 
-export default memo(FilterBody);
+export default FilterBody;

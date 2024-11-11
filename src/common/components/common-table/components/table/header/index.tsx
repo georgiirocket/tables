@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 import { useTableContext } from '@/common/components/common-table/providers';
 
-import FilterCell from './filter-cell';
+import FilterHeaderCell from './filter-cell';
 import TotalGroup from './total-group';
 
 /**
@@ -15,7 +15,7 @@ const TableHeader: FC = () => {
   const headerGroups = table.getHeaderGroups();
 
   return (
-    <div className="grid sticky to-0 z-[2] bg-table-header-color py-[0.5rem] pr-[1rem] gap-[0.5rem]">
+    <div className="grid sticky top-0 left-0 z-20 bg-table-header-color py-[0.5rem] pr-[1rem] gap-[0.5rem]">
       {headerGroups.map((headerGroup) => (
         <div key={headerGroup.id}>
           <div className="w-full flex gap-[1rem]">
@@ -25,7 +25,7 @@ const TableHeader: FC = () => {
               </div>
             )}
             {headerGroup.headers.map((header) => (
-              <FilterCell key={header.id} header={header} />
+              <FilterHeaderCell key={header.id} header={header} />
             ))}
           </div>
           {params?.isTotalRow && <TotalGroup headerGroup={headerGroup} />}

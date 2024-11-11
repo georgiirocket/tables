@@ -9,15 +9,15 @@ import { createNewExcelFilterValue } from '@/common/components/common-table/help
 import useFilterTable from './use-filter-table';
 
 interface IFilterTable {
-  column: Column<unknown, unknown>;
-  sortedUniqueValues: unknown[];
+  column: Column<any, any>;
+  sortedUniqueValues: string[];
 }
 
 /**
  * Filter column table component
  */
 const FilterColumnTable: FC<IFilterTable> = ({ column, sortedUniqueValues }) => {
-  const excelFilters = (column.getFilterValue() ?? []) as unknown[];
+  const excelFilters = (column.getFilterValue() ?? []) as string[];
 
   const { table, tableRef, rowVirtualizer } = useFilterTable(sortedUniqueValues as string[]);
 

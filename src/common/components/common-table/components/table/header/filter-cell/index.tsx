@@ -10,7 +10,7 @@ import ColumnFilter from './column-filter';
  * Filter header component
  * @constructor
  */
-const FilterCell: FC<{ header: Header<unknown, unknown> }> = ({ header }) => {
+const FilterHeaderCell: FC<{ header: Header<unknown, unknown> }> = ({ header }) => {
   const isCustomHeader = header.column.columnDef.meta?.isCustomHeader;
 
   return (
@@ -25,4 +25,4 @@ const FilterCell: FC<{ header: Header<unknown, unknown> }> = ({ header }) => {
   );
 };
 
-export default FilterCell;
+export default FilterHeaderCell;

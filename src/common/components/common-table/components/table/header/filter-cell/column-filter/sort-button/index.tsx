@@ -1,7 +1,7 @@
 'use client';
 
 import { Column } from '@tanstack/table-core';
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { BiSortAlt2 } from 'react-icons/bi';
 import { BiSortAZ } from 'react-icons/bi';
 import { BiSortZA } from 'react-icons/bi';
@@ -23,15 +23,15 @@ const SortButton: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
 
   return sorted === 'asc' ? (
     <BiSortAZ
-      className="size-[24px] cursor-pointer primary-color"
+      className="size-[24px] cursor-pointer text-primary"
       onClick={column.getToggleSortingHandler()}
     />
   ) : (
     <BiSortZA
-      className="size-[24px] cursor-pointer primary-color"
+      className="size-[24px] cursor-pointer text-primary"
       onClick={column.getToggleSortingHandler()}
     />
   );
 };
 
-export default memo(SortButton);
+export default SortButton;

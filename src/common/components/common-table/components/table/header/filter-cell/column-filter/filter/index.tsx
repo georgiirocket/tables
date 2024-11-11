@@ -1,7 +1,7 @@
 'use client';
 
 import { Column } from '@tanstack/table-core';
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { Card, CardBody, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 
 import FilterBody from './filter-body';
@@ -29,4 +29,4 @@ const Filter: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
   );
 };
 
-export default memo(Filter);
+export default Filter;

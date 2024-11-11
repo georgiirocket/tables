@@ -9,18 +9,18 @@ export const emptyString: string = 'empty';
  */
 export const createNewExcelFilterValue = (
   value: string,
-  addFlag: boolean,
-  filterValue?: string[],
+  flag: boolean,
+  filterValues?: string[],
 ): string[] | string => {
-  if (!filterValue?.length) {
+  if (!filterValues?.length) {
     return [value];
   }
 
-  if (addFlag) {
-    return [...filterValue, value];
+  if (flag) {
+    return [...filterValues, value];
   }
 
-  const result = filterValue.filter((item) => item !== value);
+  const result = filterValues.filter((item) => item !== value);
 
   return !result.length ? '' : result;
 };
@@ -28,12 +28,8 @@ export const createNewExcelFilterValue = (
 /**
  * Column filters
  */
-export const columnFilterFn: FilterFn<string> = (
-  row,
-  columnId,
-  filterValue?: string[],
-): boolean => {
-  if (!filterValue) {
+export const columnFilterFn: FilterFn<any> = (row, columnId, filterValues?: string[]): boolean => {
+  if (!filterValues) {
     return true;
   }
 
@@ -43,7 +39,7 @@ export const columnFilterFn: FilterFn<string> = (
     rowValue = emptyString;
   }
 
-  return Boolean(filterValue.find((item) => rowValue === item));
+  return Boolean(filterValues.find((item) => rowValue === item));
 };
 
 /**

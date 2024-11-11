@@ -16,8 +16,8 @@ const Table: FC = () => {
   const { tableRef, rowVirtualizer } = useTableVirtualizer({ table });
 
   return (
-    <div ref={tableRef} className="size-full overflow-auto relative">
-      <div className="grid">
+    <div ref={tableRef} className="w-full overflow-auto px-[0.5rem]">
+      <div className="grid relative">
         <TableHeader />
         <TableBody rowVirtualizer={rowVirtualizer} />
       </div>

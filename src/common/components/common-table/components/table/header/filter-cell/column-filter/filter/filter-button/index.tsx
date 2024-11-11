@@ -1,7 +1,7 @@
 'use client';
 
 import { Column } from '@tanstack/table-core';
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { TiFilter } from 'react-icons/ti';
 import { clsx } from 'clsx';
 
@@ -13,9 +13,9 @@ const FilterButton: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
 
   return (
     <TiFilter
-      className={clsx('size-[24px] cursor-pointer', { ['primary-color']: isColumnFilters })}
+      className={clsx('size-[24px] cursor-pointer', { ['text-primary']: isColumnFilters })}
     />
   );
 };
 
-export default memo(FilterButton);
+export default FilterButton;

@@ -3,7 +3,7 @@ import { FC, PropsWithChildren } from 'react';
 import { NextUIProvider } from '@nextui-org/system';
 
 import { meta } from '@/common/constants/meta';
-
+import Header from '@/common/components/header';
 import './globals.scss';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,7 +19,10 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
-        <NextUIProvider>{children}</NextUIProvider>
+        <NextUIProvider className="size-full grid grid-rows-[auto_1fr]">
+          <Header />
+          {children}
+        </NextUIProvider>
       </body>
     </html>
   );

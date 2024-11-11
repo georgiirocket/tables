@@ -1,7 +1,7 @@
 'use client';
 
 import { Column } from '@tanstack/table-core';
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { Input, Tooltip } from '@nextui-org/react';
 
 /**
@@ -44,4 +44,4 @@ const ColumnInput: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
   );
 };
 
-export default memo(ColumnInput);
+export default ColumnInput;

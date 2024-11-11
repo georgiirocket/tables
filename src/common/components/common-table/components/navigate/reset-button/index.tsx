@@ -26,7 +26,7 @@ const ResetFilterButton: FC = () => {
 
   return (
     <FaTrashAlt
-      className={clsx('cursor-pointer shrink-0', { ['primary-color']: isFilters })}
+      className={clsx('cursor-pointer shrink-0', { ['text-primary']: isFilters })}
       onClick={handleResetAllFilters}
     />
   );

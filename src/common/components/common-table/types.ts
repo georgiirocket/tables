@@ -17,7 +17,7 @@ export interface ITableClassNames {
 }
 
 export interface ITableContext {
-  table: Table<unknown>;
+  table: Table<any>;
   isFullScreen: boolean;
   toggleFullScreen: () => void;
   methods?: ITableContextMethods;
