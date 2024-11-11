@@ -22,7 +22,7 @@ const RowCellSticky: FC<IRowCellSticky> = ({ id, rowIndex }) => {
     <div
       onClick={() => methods?.onRowClick?.(id)}
       className={clsx(
-        'w-[100px] flex items-center overflow-hidden sticky left-0 to-0 bg-[var(--table-bg)] px-[0.5rem] gap-[5px] z-[2]',
+        'w-[100px] flex items-center overflow-hidden sticky left-0 to-0 bg-table-header-color px-[0.5rem] gap-[5px] z-[2]',
         {
           ['cursor-pointer']: isNumberClick,
         },

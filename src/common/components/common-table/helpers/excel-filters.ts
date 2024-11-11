@@ -28,7 +28,7 @@ export const createNewExcelFilterValue = (
 /**
  * Column filters
  */
-export const columnFilterFn: FilterFn<unknown> = (
+export const columnFilterFn: FilterFn<string> = (
   row,
   columnId,
   filterValue?: string[],
@@ -37,7 +37,7 @@ export const columnFilterFn: FilterFn<unknown> = (
     return true;
   }
 
-  let rowValue = String(row.getValue(columnId)) as unknown;
+  let rowValue = String(row.getValue(columnId)) as string;
 
   if (!rowValue) {
     rowValue = emptyString;

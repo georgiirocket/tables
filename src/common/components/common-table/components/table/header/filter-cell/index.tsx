@@ -16,7 +16,7 @@ const FilterCell: FC<{ header: Header<unknown, unknown> }> = ({ header }) => {
   return (
     <div
       data-header-table-id={header.id}
-      className="table-header-cell"
+      className="flex flex-col flex-1 gap-[5px]"
       style={{ minWidth: header.getSize() }}
     >
       {isCustomHeader && flexRender(header.column.columnDef.header, header.getContext())}

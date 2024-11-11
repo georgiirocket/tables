@@ -15,11 +15,15 @@ const TableHeader: FC = () => {
   const headerGroups = table.getHeaderGroups();
 
   return (
-    <div className="table-header">
+    <div className="grid sticky to-0 z-[2] bg-table-header-color py-[0.5rem] pr-[1rem] gap-[0.5rem]">
       {headerGroups.map((headerGroup) => (
         <div key={headerGroup.id}>
-          <div className="table-header-group">
-            {params?.isCountColumn && <div className="table-header-numeral">#</div>}
+          <div className="w-full flex gap-[1rem]">
+            {params?.isCountColumn && (
+              <div className="w-[100px] pl-[0.5rem] sticky left-0 to-0 bg-table-header-color z-20 flex items-center">
+                #
+              </div>
+            )}
             {headerGroup.headers.map((header) => (
               <FilterCell key={header.id} header={header} />
             ))}

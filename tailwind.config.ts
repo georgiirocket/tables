@@ -10,20 +10,18 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
+  theme: {
+    colors: {
+      'main-bg-color': 'var(--main-background)',
+      'table-header-color': 'var(--table-header)',
+    },
+  },
   plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
-        '.full-screen': {},
-        '.table-search-wrapper': {},
-        '.table-navigate': {},
-        '.table-column-toggle-body': {},
-        '.table-column-toggle-buttons': {},
-        '.table-header': {},
-        '.table-header-group': {},
-        '.table-header-cell': {},
-        '.table-header-numeral': {},
-        '.table-header-total-cell': {},
         '.scroll-bar-2': {},
+        '.scroll-bar-height-4': {},
+        '.scroll-bar-3': {},
       });
     }),
     nextui({

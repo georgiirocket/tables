@@ -17,13 +17,15 @@ const TotalGroup: FC<{ headerGroup: HeaderGroup<unknown> }> = ({ headerGroup }) 
   const { params } = useTableContext();
 
   return (
-    <div className="table-header-group">
-      {params?.isCountColumn && <div className="table-header-numeral" />}
+    <div className="w-full flex gap-[1rem]">
+      {params?.isCountColumn && (
+        <div className="w-[100px] pl-[0.5rem] sticky left-0 to-0 bg-table-header-color z-20 flex items-center" />
+      )}
       {headerGroup.headers.map((header) => {
         if (!header.column.columnDef.meta?.isTotal) {
           return (
             <div
-              className="table-header-cell"
+              className="flex flex-col flex-1 gap-[5px]"
               style={{ minWidth: header.getSize() }}
               key={`${header.id}_total_row`}
             />
@@ -33,7 +35,7 @@ const TotalGroup: FC<{ headerGroup: HeaderGroup<unknown> }> = ({ headerGroup }) 
         return (
           <div
             key={`${header.id}_total_row`}
-            className={clsx('table-header-cell', 'table-header-total-cell')}
+            className={clsx('flex flex-col flex-1 gap-[5px]', 'overflow-auto scroll-bar-height-4')}
             style={{ minWidth: header.getSize() }}
           >
             <Total columnId={header.column.id as string} />

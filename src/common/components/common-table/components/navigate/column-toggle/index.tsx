@@ -29,7 +29,7 @@ const ColumnToggle: FC = () => {
       <PopoverContent className="p-0">
         <Card className="w-[250px]">
           <CardBody className="p-0">
-            <div className="table-column-toggle-buttons">
+            <div className="grid gap-[0.3rem] grid-cols-[1fr_auto] bg-table-header-color p-[0.5rem]">
               <Switch
                 isSelected={isAllVisible}
                 checked={isAllVisible}
@@ -41,7 +41,7 @@ const ColumnToggle: FC = () => {
               <ResetTablesSettings />
             </div>
             <Reorder.Group
-              className="table-column-toggle-body"
+              className="flex flex-col gap-[0.5rem] h-[300px] overflow-auto relative p-[0.5rem] pr-0"
               values={allColumns.map(({ id }) => id)}
               onReorder={(order) => table.setColumnOrder(order)}
             >

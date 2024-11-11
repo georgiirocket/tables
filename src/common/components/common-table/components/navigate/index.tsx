@@ -13,7 +13,7 @@ import UpdateDataButton from './update-button';
  */
 const Navigate: FC = () => {
   return (
-    <div className="table-navigate">
+    <div className="flex justify-end items-center bg-table-header-color gap-[0.5rem]">
       <SearchInput />
       <ResetFilterButton />
       <ColumnToggle />
