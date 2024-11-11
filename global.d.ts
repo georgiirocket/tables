@@ -8,11 +8,5 @@ declare module '@tanstack/react-table' {
     isCustomHeader?: boolean;
     headerDescription?: string;
     className?: string;
-    colors?: {
-      yellow?: boolean;
-      lessRed?: boolean;
-      green?: boolean;
-      violet?: boolean;
-    };
   }
 }

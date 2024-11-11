@@ -12,12 +12,17 @@ export interface ITableContextMethods {
   onUpdateData?: () => Promise<void> | void;
 }
 
+export interface ITableClassNames {
+  wrapper?: string;
+}
+
 export interface ITableContext {
   table: Table<unknown>;
   isFullScreen: boolean;
   toggleFullScreen: () => void;
   methods?: ITableContextMethods;
   params?: ITableContextParams;
+  classNames?: ITableClassNames;
 }
 
-export type ICommonTableProps = Pick<ITableContext, 'table' | 'methods' | 'params'>;
+export type ICommonTableProps = Pick<ITableContext, 'table' | 'methods' | 'params' | 'classNames'>;

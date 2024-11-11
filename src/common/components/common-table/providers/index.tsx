@@ -15,8 +15,7 @@ const TableContext = createContext<ITableContext>(undefined!);
 const TableProvider: FC<PropsWithChildren<ICommonTableProps>> = ({
   table,
   children,
-  params,
-  methods,
+  ...otherProps
 }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
 
@@ -26,7 +25,7 @@ const TableProvider: FC<PropsWithChildren<ICommonTableProps>> = ({
   const toggleFullScreen = (): void => setIsFullScreen((prevState) => !prevState);
 
   return (
-    <TableContext.Provider value={{ table, isFullScreen, toggleFullScreen, methods, params }}>
+    <TableContext.Provider value={{ table, isFullScreen, toggleFullScreen, ...otherProps }}>
       {children}
     </TableContext.Provider>
   );

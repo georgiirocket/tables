@@ -8,13 +8,13 @@
   "rules": {
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "prefer-const": "error",
-    "quotes": ["error", "single"],
     "jsx-quotes": ["error", "prefer-double"],
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/react-in-jsx-scope": "off",
     "react-hooks/exhaustive-deps": "off",
+    "quotes": [2, "single", { "avoidEscape": true }],
     "prettier/prettier": [
       "error",
       {
