@@ -1,4 +1,5 @@
 import { Table } from '@tanstack/table-core';
+import { ComponentType } from 'react';
 
 export interface ITableContextParams {
   isPendingSettings?: boolean;
@@ -13,6 +14,10 @@ export interface ITableClassNames {
   wrapper?: string;
 }
 
+export interface ITableComponents {
+  menu?: ComponentType<{ table: ITableContext['table'] }>;
+}
+
 export interface ITableContext {
   table: Table<any>;
   isFullScreen: boolean;
@@ -20,6 +25,10 @@ export interface ITableContext {
   methods?: ITableContextMethods;
   params?: ITableContextParams;
   classNames?: ITableClassNames;
+  components?: ITableComponents;
 }
 
-export type ICommonTableProps = Pick<ITableContext, 'table' | 'methods' | 'params' | 'classNames'>;
+export type ICommonTableProps = Pick<
+  ITableContext,
+  'table' | 'methods' | 'params' | 'classNames' | 'components'
+>;
