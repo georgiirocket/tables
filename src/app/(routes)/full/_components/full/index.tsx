@@ -12,6 +12,7 @@ import { useReactTable } from '@tanstack/react-table';
 
 import CommonTable from '@/common/components/common-table';
 import { baseFiltersStore, dataStore } from '@/common/stores';
+import MenuTable from '@/common/components/common-table/components/shared/menu';
 
 import { columData } from './data';
 
@@ -48,7 +49,14 @@ const FullTable: FC = () => {
     getRowId: (item) => String(item.id),
   });
 
-  return <CommonTable table={table} methods={{ onRowClick, onUpdateData: updateData }} />;
+  return (
+    <CommonTable
+      table={table}
+      methods={{ onRowClick, onUpdateData: updateData }}
+      params={{ excelName: 'full' }}
+      components={{ menu: MenuTable }}
+    />
+  );
 };
 
 export default FullTable;

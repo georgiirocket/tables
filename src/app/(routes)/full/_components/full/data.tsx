@@ -17,7 +17,7 @@ export const columData: IColumn = [
     cell: CountCell,
     size: 100,
     enableGlobalFilter: false,
-    meta: { headerName: 'No.' },
+    meta: { headerName: 'No.', isDownloadExcel: true },
   },
   {
     accessorKey: 'image',
@@ -30,25 +30,27 @@ export const columData: IColumn = [
     accessorKey: 'title',
     header: 'Title',
     size: 180,
+    meta: { isDownloadExcel: true },
   },
   {
     accessorKey: 'price',
     header: FilterHeaderCell,
     filterFn: columnFilterFn,
     size: 100,
-    meta: { headerName: 'Price', isTotal: true },
+    meta: { headerName: 'Price', isTotal: true, isDownloadExcel: true },
   },
   {
     accessorKey: 'description',
     header: 'Description',
     cell: DescriptionCell,
     size: 250,
+    meta: { isDownloadExcel: true },
   },
   {
     accessorKey: 'category',
     header: FilterHeaderCell,
     filterFn: columnFilterFn,
     size: 150,
-    meta: { headerName: 'Category' },
+    meta: { headerName: 'Category', isDownloadExcel: true },
   },
 ];
