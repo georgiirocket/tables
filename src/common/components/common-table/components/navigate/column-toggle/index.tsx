@@ -46,6 +46,10 @@ const ColumnToggle: FC = () => {
               onReorder={(order) => table.setColumnOrder(order)}
             >
               {allColumns.map((column) => {
+                const { header, meta } = column.columnDef;
+                const displayName =
+                  typeof header === 'string' ? (header as never) : (meta?.headerName ?? 'Unknown');
+
                 return (
                   <Reorder.Item
                     key={column.id}
@@ -59,7 +63,7 @@ const ColumnToggle: FC = () => {
                       onChange={column.getToggleVisibilityHandler()}
                       className="overflow-hidden text-ellipsis"
                     >
-                      {column.columnDef.header as string}
+                      {displayName}
                     </Switch>
                     <Button isIconOnly size="sm">
                       <RxDragHandleHorizontal />

@@ -23,13 +23,6 @@ const BaseTable: FC = () => {
   const { sorting, setSorting, globalFilter, setGlobalFilter, columnFilters, setColumnFilters } =
     baseFiltersStore((state) => state);
 
-  /**
-   * Handle row click
-   */
-  const onRowClick = (rowId: string): void => {
-    alert(`Row id: ${rowId}`);
-  };
-
   const table = useReactTable({
     data: baseEntities,
     columns: columData,
@@ -43,12 +36,11 @@ const BaseTable: FC = () => {
     onGlobalFilterChange: setGlobalFilter,
     onColumnFiltersChange: setColumnFilters,
     onSortingChange: setSorting,
-    // ...settingHandlers,
     state: { globalFilter, columnFilters, sorting },
     getRowId: (item) => String(item.id),
   });
 
-  return <CommonTable table={table} methods={{ onRowClick }} />;
+  return <CommonTable table={table} />;
 };
 
 export default BaseTable;

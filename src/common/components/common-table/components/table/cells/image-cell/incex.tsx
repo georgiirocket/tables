@@ -5,7 +5,7 @@ import { CellContext } from '@tanstack/table-core';
 import { Image } from '@nextui-org/react';
 
 /**
- * Cell context
+ * Image cell
  * @param context
  * @constructor
  */
