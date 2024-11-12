@@ -1,7 +1,10 @@
+import { ReactNode } from 'react';
+import { MdUpdate } from 'react-icons/md';
+
 export interface IRoute {
   path: string;
   name: string;
-  description?: string;
+  description?: string | ReactNode;
 }
 
 /**
@@ -27,6 +30,15 @@ export const routes: IRoute[] = [
     path: '/with-total-row',
     name: 'With total row',
     description: 'Counting in a number column',
+  },
+  {
+    path: '/update-data',
+    name: 'Update data',
+    description: (
+      <span>
+        Update data. Press <MdUpdate className="size-[20px] inline" />
+      </span>
+    ),
   },
   {
     path: '/many-entities',

@@ -8,6 +8,8 @@ import { IEntity, base, generateManyEntities } from './data';
 export interface IDataStore {
   baseEntities: IEntity[];
   manyEntities: IEntity[];
+  updateTableEntities: IEntity[];
+  updateData: () => Promise<void>;
 }
 
 /**
@@ -19,8 +21,24 @@ export const baseFiltersStore = createFilterTableStore();
  * Data store
  */
 export const dataStore = create<IDataStore>()(
-  immer(() => ({
+  immer((set) => ({
     baseEntities: base,
     manyEntities: generateManyEntities(50),
+    updateTableEntities: base,
+
+    /**
+     * Update table data
+     */
+    updateData: () => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          set((state) => {
+            state.updateTableEntities = state.updateTableEntities.reverse();
+          });
+
+          resolve();
+        }, 1000);
+      });
+    },
   })),
 );

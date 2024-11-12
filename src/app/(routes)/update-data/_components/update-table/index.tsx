@@ -16,20 +16,12 @@ import { baseFiltersStore, dataStore } from '@/common/stores';
 import { columData } from './data';
 
 /**
- * Full table component
+ * Update table component
  */
-const FullTable: FC = () => {
-  const { updateData, updateTableEntities } = dataStore((state) => state);
+const UpdateTable: FC = () => {
+  const { updateTableEntities, updateData } = dataStore((state) => state);
   const { sorting, setSorting, globalFilter, setGlobalFilter, columnFilters, setColumnFilters } =
     baseFiltersStore((state) => state);
-
-  /**
-   * On row click
-   * @param id
-   */
-  const onRowClick = (id: string): void => {
-    alert(`Row id: ${id}`);
-  };
 
   const table = useReactTable({
     data: updateTableEntities,
@@ -48,7 +40,7 @@ const FullTable: FC = () => {
     getRowId: (item) => String(item.id),
   });
 
-  return <CommonTable table={table} methods={{ onRowClick, onUpdateData: updateData }} />;
+  return <CommonTable table={table} methods={{ onUpdateData: updateData }} />;
 };
 
-export default FullTable;
+export default UpdateTable;
