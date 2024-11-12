@@ -6,6 +6,7 @@ declare module '@tanstack/react-table' {
     containMode?: 'includes' | 'startWith';
     isTotal?: boolean;
     isCustomHeader?: boolean;
+    headerName?: string;
     headerDescription?: string;
     className?: string;
   }

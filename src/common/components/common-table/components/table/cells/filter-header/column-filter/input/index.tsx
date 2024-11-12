@@ -10,11 +10,8 @@ import { Input, Tooltip } from '@nextui-org/react';
 const ColumnInput: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
   const columnFilterValue = (column.getFilterValue() ?? []) as string[];
   const inputState = columnFilterValue.join(',');
-  const displayHeader = String(column.columnDef.header);
+  const displayHeader = String(column.columnDef.meta?.headerName ?? 'Unknown');
   const displayDescription = column.columnDef.meta?.headerDescription;
-
-  const displayLabel =
-    typeof column.columnDef.header === 'string' ? column.columnDef.header : 'Label';
 
   return (
     <Tooltip
@@ -34,7 +31,7 @@ const ColumnInput: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
           isDisabled
           value={inputState}
           variant="underlined"
-          label={displayLabel}
+          label={displayHeader}
           className="xs whitespace-nowrap opacity"
           classNames={{ base: !inputState ? 'opacity-1' : '' }}
           size="sm"

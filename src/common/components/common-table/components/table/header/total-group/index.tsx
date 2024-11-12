@@ -4,8 +4,6 @@ import { FC } from 'react';
 import { clsx } from 'clsx';
 import { HeaderGroup } from '@tanstack/table-core';
 
-import { useTableContext } from '@/common/components/common-table/providers';
-
 import Total from './total';
 
 /**
@@ -14,13 +12,8 @@ import Total from './total';
  * @constructor
  */
 const TotalGroup: FC<{ headerGroup: HeaderGroup<unknown> }> = ({ headerGroup }) => {
-  const { params } = useTableContext();
-
   return (
     <div className="w-full flex gap-[1rem]">
-      {params?.isCountColumn && (
-        <div className="w-[100px] pl-[0.5rem] sticky left-0 to-0 bg-table-header-color z-20 flex items-center" />
-      )}
       {headerGroup.headers.map((header) => {
         if (!header.column.columnDef.meta?.isTotal) {
           return (

@@ -1,9 +1,6 @@
 import { Table } from '@tanstack/table-core';
 
 export interface ITableContextParams {
-  isTotalRow?: boolean;
-  isCountColumn?: boolean;
-  isTextNowrap?: boolean;
   isSettingLoading?: boolean;
 }
 
