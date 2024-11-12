@@ -7,5 +7,6 @@ declare module '@tanstack/react-table' {
     isTotal?: boolean;
     headerName?: string;
     headerDescription?: string;
+    isDownloadExcel?: boolean;
   }
 }

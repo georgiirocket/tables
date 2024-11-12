@@ -3,6 +3,7 @@ import { ComponentType } from 'react';
 
 export interface ITableContextParams {
   isPendingSettings?: boolean;
+  excelName?: string;
 }
 
 export interface ITableContextMethods {

@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { MdUpdate } from 'react-icons/md';
+import { ImMenu2 } from 'react-icons/im';
 
 export interface IRoute {
   path: string;
@@ -30,6 +31,15 @@ export const routes: IRoute[] = [
     path: '/with-total-row',
     name: 'With total row',
     description: 'Counting in a number column',
+  },
+  {
+    path: '/with-menu',
+    name: 'With menu',
+    description: (
+      <span>
+        With menu. Press <ImMenu2 className="size-[20px] inline" />
+      </span>
+    ),
   },
   {
     path: '/update-data',
