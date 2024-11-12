@@ -13,6 +13,7 @@ import { useReactTable } from '@tanstack/react-table';
 import CommonTable from '@/common/components/common-table';
 import { baseFiltersStore, dataStore } from '@/common/stores';
 import MenuTable from '@/common/components/common-table/components/shared/menu';
+import useSaveTableSetting from '@/common/components/common-table/hooks/use-save-table-setting';
 
 import { columData } from './data';
 
@@ -23,6 +24,8 @@ const FullTable: FC = () => {
   const { updateData, updateTableEntities } = dataStore((state) => state);
   const { sorting, setSorting, globalFilter, setGlobalFilter, columnFilters, setColumnFilters } =
     baseFiltersStore((state) => state);
+
+  const { isPendingSettings, settingState, settingHandlers } = useSaveTableSetting('full');
 
   /**
    * On row click
@@ -45,7 +48,8 @@ const FullTable: FC = () => {
     onGlobalFilterChange: setGlobalFilter,
     onColumnFiltersChange: setColumnFilters,
     onSortingChange: setSorting,
-    state: { globalFilter, columnFilters, sorting },
+    ...settingHandlers,
+    state: { globalFilter, columnFilters, sorting, ...settingState },
     getRowId: (item) => String(item.id),
   });
 
@@ -53,7 +57,7 @@ const FullTable: FC = () => {
     <CommonTable
       table={table}
       methods={{ onRowClick, onUpdateData: updateData }}
-      params={{ excelName: 'full' }}
+      params={{ excelName: 'full', isPendingSettings }}
       components={{ menu: MenuTable }}
     />
   );
