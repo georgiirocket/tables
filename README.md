@@ -78,7 +78,7 @@ export const columData: IColumn = [
 
 index.tsx (table component)
 
-```ts
+```jsx
 const BaseTable: FC = () => {
     const { baseEntities } = dataStore((state) => state);
     const { sorting, setSorting, globalFilter, setGlobalFilter, columnFilters, setColumnFilters } =
