@@ -24,10 +24,10 @@ const MenuTable: FC<{ table: ITableContext['table'] }> = ({ table }) => {
 
   const items: IDropdownItem[] = [
     {
-      key: 'create-excel',
-      label: 'Create excel',
+      key: 'download-excel',
+      label: 'Download excel',
       onClick: createExcel,
-      startContent: <RiFileExcel2Line />,
+      startContent: <RiFileExcel2Line className="size-[20px]" />,
     },
   ];
 
@@ -45,7 +45,7 @@ const MenuTable: FC<{ table: ITableContext['table'] }> = ({ table }) => {
           <DropdownItem
             key={item.key}
             startContent={item.startContent}
-            description={item.startContent}
+            description={item.description}
           >
             {item.label}
           </DropdownItem>
