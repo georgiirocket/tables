@@ -1,7 +1,7 @@
 import { Table } from '@tanstack/table-core';
 
 export interface ITableContextParams {
-  isSettingLoading?: boolean;
+  isPendingSettings?: boolean;
 }
 
 export interface ITableContextMethods {

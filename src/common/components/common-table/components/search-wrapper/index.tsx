@@ -18,7 +18,7 @@ const SearchTableWrapper: FC<PropsWithChildren> = ({ children }) => {
     <motion.div
       initial="offscreen"
       variants={variants}
-      animate={params?.isSettingLoading ? 'offscreen' : 'onscreen'}
+      animate={params?.isPendingSettings ? 'offscreen' : 'onscreen'}
       className={clsx(
         'size-full grid grid-rows-[auto_1fr] bg-table-header-color overflow-hidden rounded-xl pt-[0.5rem]',
         classNames?.wrapper,

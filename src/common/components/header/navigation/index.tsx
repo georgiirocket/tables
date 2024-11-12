@@ -15,7 +15,7 @@ const Navigation: FC = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="max-w-[1200px] flex flex-wrap gap-1 mx-auto">
+    <nav className="max-w-[1200px] flex flex-wrap gap-1 mx-auto justify-center">
       {routes.map(({ path, name }) => (
         <Button
           size="sm"
