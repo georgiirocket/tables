@@ -21,13 +21,21 @@ export const routes: IRoute[] = [
   {
     path: '/with-first-index-column',
     name: 'With first index',
+    description: 'Row index (clickable)',
+  },
+  {
+    path: '/with-total-row',
+    name: 'With total row',
+    description: 'Counting in a number column',
   },
   {
     path: '/many-entities',
     name: 'Many entities',
+    description: '1000 entities (virtual scroll)',
   },
   {
     path: '/full',
     name: 'Full',
+    description: 'Full functionally',
   },
 ];
