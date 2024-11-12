@@ -30,7 +30,7 @@ const TableBody: FC<{ rowVirtualizer: Virtualizer<HTMLDivElement, Element> }> = 
             data-index={virtualRow.index}
             ref={(node) => rowVirtualizer.measureElement(node)}
             key={row.id}
-            className="w-full flex absolute py-[0.5rem] pr-[1rem] gap-[1rem] hover:bg-table-header-color"
+            className="w-full flex absolute py-[0.5rem] pr-[1rem] gap-[1rem] hover:bg-table-hover rounded-medium"
             style={{ transform: `translateY(${virtualRow.start}px)` }}
           >
             {params?.isCountColumn && <RowCellSticky id={row.id} rowIndex={rowIndex} />}

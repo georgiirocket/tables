@@ -53,7 +53,7 @@ const ResetTablesSettings: FC = () => {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button size="sm" isIconOnly aria-label="Table settings" className="mr-1">
+        <Button size="sm" isIconOnly aria-label="Table settings">
           <IoMdSettings title="Print Document" className="w-[20px] h-[20px]" />
         </Button>
       </DropdownTrigger>

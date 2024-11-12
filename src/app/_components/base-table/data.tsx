@@ -26,31 +26,7 @@ export const columData: IColumn = [
   },
   {
     accessorKey: 'category',
-    header: 'Description',
-    filterFn: columnFilterFn,
-    size: 150,
-  },
-  {
-    accessorKey: 'title',
-    header: 'Title',
-    filterFn: columnFilterFn,
-    size: 180,
-  },
-  {
-    accessorKey: 'price',
-    header: 'Price',
-    filterFn: columnFilterFn,
-    size: 100,
-  },
-  {
-    accessorKey: 'description',
-    header: 'Description',
-    filterFn: columnFilterFn,
-    size: 250,
-  },
-  {
-    accessorKey: 'category',
-    header: 'Description',
+    header: 'Category',
     filterFn: columnFilterFn,
     size: 150,
   },

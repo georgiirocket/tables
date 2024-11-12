@@ -12,6 +12,7 @@ const config: Config = {
     colors: {
       'main-bg-color': 'var(--main-background)',
       'table-header-color': 'var(--table-header)',
+      'table-hover': 'var(--common-hover)',
     },
   },
   plugins: [
@@ -20,8 +21,6 @@ const config: Config = {
         '.scroll-bar-2': {},
         '.scroll-bar-height-4': {},
         '.scroll-bar-3': {},
-        '.progress-bar': {},
-        '.main-container': {},
       });
     }),
     nextui({

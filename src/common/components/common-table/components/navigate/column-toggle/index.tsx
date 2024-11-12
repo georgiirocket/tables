@@ -41,7 +41,7 @@ const ColumnToggle: FC = () => {
               <ResetTablesSettings />
             </div>
             <Reorder.Group
-              className="flex flex-col gap-[0.5rem] h-[300px] overflow-auto relative p-[0.5rem] pr-0"
+              className="flex flex-col gap-1 h-[300px] overflow-auto relative py-[0.5rem]"
               values={allColumns.map(({ id }) => id)}
               onReorder={(order) => table.setColumnOrder(order)}
             >
@@ -50,7 +50,7 @@ const ColumnToggle: FC = () => {
                   <Reorder.Item
                     key={column.id}
                     value={column.id}
-                    className="w-full grid gap-1 grid-cols-[1fr_auto] pr-1"
+                    className="w-full grid gap-1 grid-cols-[1fr_auto] px-[0.5rem]"
                   >
                     <Switch
                       size="sm"
