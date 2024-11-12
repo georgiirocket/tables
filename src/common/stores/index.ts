@@ -3,10 +3,11 @@ import { immer } from 'zustand/middleware/immer';
 
 import { createFilterTableStore } from '@/common/components/common-table/store';
 
-import { IEntity, base } from './data';
+import { IEntity, base, generateManyEntities } from './data';
 
 export interface IDataStore {
   baseEntities: IEntity[];
+  manyEntities: IEntity[];
 }
 
 /**
@@ -20,5 +21,6 @@ export const baseFiltersStore = createFilterTableStore();
 export const dataStore = create<IDataStore>()(
   immer(() => ({
     baseEntities: base,
+    manyEntities: generateManyEntities(50),
   })),
 );

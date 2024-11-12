@@ -276,3 +276,30 @@ export const base: IEntity[] = [
     },
   },
 ];
+
+/**
+ * Generate many entities
+ * @param len (positive number)
+ */
+export const generateManyEntities = (len: number): IEntity[] => {
+  let entities: IEntity[] = [];
+
+  if (len <= 0) {
+    return base;
+  }
+
+  let currentIndex: number = 0;
+
+  while (currentIndex < len) {
+    entities = [...entities, ...structuredClone(base)];
+
+    currentIndex++;
+  }
+
+  entities.forEach((item, index) => {
+    item.id = index + 1;
+    item.title = item.title + String(index);
+  });
+
+  return entities;
+};
