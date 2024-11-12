@@ -31,4 +31,8 @@
       height: 4px;
     }
   }
+
+  .main-container {
+    @apply w-full max-w-[1200px] mx-auto py-2 sm:py-10 px-2 overflow-auto;
+  }
 }

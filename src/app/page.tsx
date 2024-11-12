@@ -8,7 +8,7 @@ import BaseTable from './_components/base-table';
  */
 const Page: FC = () => {
   return (
-    <main className="w-full max-w-[1200px] mx-auto py-10 px-2 overflow-auto">
+    <main className="main-container">
       <BaseTable />
     </main>
   );

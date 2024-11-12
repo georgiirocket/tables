@@ -21,6 +21,7 @@ const config: Config = {
         '.scroll-bar-2': {},
         '.scroll-bar-height-4': {},
         '.scroll-bar-3': {},
+        '.main-container': {},
       });
     }),
     nextui({
