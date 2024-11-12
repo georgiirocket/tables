@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import ManyEntitiesTable from './_components/many-entities';
 
 export const metadata: Metadata = {
-  title: 'Many Entities',
+  title: 'Many Entities | Tables, TanStack Table',
 };
 
 /**

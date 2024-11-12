@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import FullTable from './_components/full';
 
 export const metadata: Metadata = {
-  title: 'Full',
+  title: 'Full | Tables, TanStack Table',
 };
 
 /**

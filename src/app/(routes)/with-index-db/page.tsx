@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import WithIndexDbTable from './_components/with-index-db-table';
 
 export const metadata: Metadata = {
-  title: 'With index db',
+  title: 'With index db | Tables, TanStack Table',
 };
 
 /**

@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import WithFirstIndexColumnTable from './_components/with-first-index-column';
 
 export const metadata: Metadata = {
-  title: 'With first index column',
+  title: 'With first index column | Tables, TanStack Table',
 };
 
 /**

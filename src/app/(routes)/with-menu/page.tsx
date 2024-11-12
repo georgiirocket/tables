@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import WithMenuTable from './_components/with-menu';
 
 export const metadata: Metadata = {
-  title: 'With Menu',
+  title: 'With Menu | Tables, TanStack Table',
 };
 
 /**
