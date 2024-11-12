@@ -3,14 +3,21 @@ import { ColumnDef } from '@tanstack/table-core';
 import { columnFilterFn } from '@/common/components/common-table/helpers/excel-filters';
 import { IEntity } from '@/common/stores/data';
 import FilterHeaderCell from '@/common/components/common-table/components/table/cells/filter-header/incex';
+import ImageCell from '@/common/components/common-table/components/table/cells/image-cell/incex';
 
 export type IColumn = ColumnDef<IEntity>[];
 
 export const columData: IColumn = [
   {
+    accessorKey: 'image',
+    header: 'Photo',
+    cell: ImageCell,
+    size: 180,
+    enableGlobalFilter: false,
+  },
+  {
     accessorKey: 'title',
     header: 'Title',
-    // filterFn: columnFilterFn,
     size: 180,
   },
   {
