@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { MdOutlineAlignHorizontalLeft } from 'react-icons/md';
 import { MdOutlineAlignVerticalCenter } from 'react-icons/md';
-import { Button } from '@nextui-org/react';
+import { Button } from '@heroui/button';
 
 interface IContainButton {
   containMode: 'includes' | 'startWith';

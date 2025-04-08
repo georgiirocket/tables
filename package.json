@@ -10,14 +10,14 @@
     "ts:check": "tsc --project ./tsconfig.json --skipLibCheck --noemit"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.4.8",
-    "@tanstack/react-table": "^8.20.5",
-    "@tanstack/react-virtual": "^3.10.9",
+    "@heroui/react": "2.7.6",
+    "@tanstack/react-table": "^8.21.2",
+    "@tanstack/react-virtual": "^3.13.6",
     "clsx": "^2.1.1",
     "dexie": "^4.0.9",
     "dexie-react-hooks": "^1.1.7",
     "fast-sort": "^3.4.1",
-    "framer-motion": "^11.11.10",
+    "framer-motion": "^12.6.3",
     "immer": "^10.1.1",
     "lodash": "^4.17.21",
     "next": "14.2.16",
@@ -25,7 +25,7 @@
     "react-dom": "^18",
     "react-icons": "^5.3.0",
     "write-excel-file": "^2.0.10",
-    "zustand": "^5.0.0"
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@types/node": "^20",

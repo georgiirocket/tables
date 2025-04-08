@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { Input } from '@nextui-org/react';
+import { Input } from '@heroui/input';
 import { FaSearch } from 'react-icons/fa';
 
 interface ISearchFilterInput {

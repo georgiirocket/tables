@@ -2,7 +2,7 @@
 
 import { Column, Row } from '@tanstack/table-core';
 import { ChangeEvent, FC } from 'react';
-import { Switch } from '@nextui-org/react';
+import { Switch } from '@heroui/switch';
 
 import { createNewExcelFilterValue } from '@/common/components/common-table/helpers/excel-filters';
 

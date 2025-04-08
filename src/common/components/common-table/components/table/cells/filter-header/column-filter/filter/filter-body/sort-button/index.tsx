@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { BiSortAZ } from 'react-icons/bi';
 import { BiSortZA } from 'react-icons/bi';
-import { Button } from '@nextui-org/react';
+import { Button } from '@heroui/button';
 
 interface ISortButton {
   sortMode: 'asc' | 'desc';

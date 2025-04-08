@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { CellContext } from '@tanstack/table-core';
-import { Tooltip } from '@nextui-org/react';
+import { Tooltip } from '@heroui/tooltip';
 
 /**
  * Description cell

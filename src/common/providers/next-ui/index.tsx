@@ -1,13 +1,13 @@
 'use client';
 
-import { NextUIProvider } from '@nextui-org/system';
+import { HeroUIProvider } from '@heroui/system';
 import { FC, PropsWithChildren } from 'react';
 
 /**
- * Next ui provider
+ * Hero ui provider
  */
 const UiProvider: FC<PropsWithChildren> = ({ children }) => {
-  return <NextUIProvider>{children}</NextUIProvider>;
+  return <HeroUIProvider>{children}</HeroUIProvider>;
 };
 
 export default UiProvider;

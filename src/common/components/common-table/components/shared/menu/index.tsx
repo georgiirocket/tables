@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-org/react';
+import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@heroui/dropdown';
 import { RiFileExcel2Line } from 'react-icons/ri';
 import { ImMenu2 } from 'react-icons/im';
 

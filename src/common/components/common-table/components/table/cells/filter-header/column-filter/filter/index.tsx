@@ -2,7 +2,8 @@
 
 import { Column } from '@tanstack/table-core';
 import { FC } from 'react';
-import { Card, CardBody, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
+import { Card, CardBody } from '@heroui/card';
+import { Popover, PopoverTrigger, PopoverContent } from '@heroui/popover';
 
 import FilterBody from './filter-body';
 import FilterButton from './filter-button';

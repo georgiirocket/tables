@@ -1,8 +1,9 @@
 'use client';
 
 import { FC } from 'react';
-import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-org/react';
+import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@heroui/dropdown';
 import { IoMdSettings } from 'react-icons/io';
+import { Button } from '@heroui/button';
 
 import { useTableContext } from '@/common/components/common-table/providers';
 import {

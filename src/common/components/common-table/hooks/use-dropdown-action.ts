@@ -1,4 +1,4 @@
-import { DropdownMenuProps } from '@nextui-org/react';
+import { DropdownMenuProps } from '@heroui/dropdown';
 import { Key, ReactNode, useCallback, useMemo } from 'react';
 
 export interface IDropdownItem {

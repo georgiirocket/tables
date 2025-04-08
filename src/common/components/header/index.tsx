@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Image } from '@nextui-org/react';
+import { Image } from '@heroui/image';
 
 import Navigation from './navigation';
 import Description from './description';

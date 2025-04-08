@@ -1,9 +1,9 @@
 'use client';
 
 import { FC } from 'react';
-import { Button, Card, CardBody, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
+import { Button, Card, CardBody, Popover, PopoverContent, PopoverTrigger } from '@heroui/react';
 import { MdViewColumn } from 'react-icons/md';
-import { Switch } from '@nextui-org/react';
+import { Switch } from '@heroui/switch';
 import { Reorder } from 'framer-motion';
 import { RxDragHandleHorizontal } from 'react-icons/rx';
 

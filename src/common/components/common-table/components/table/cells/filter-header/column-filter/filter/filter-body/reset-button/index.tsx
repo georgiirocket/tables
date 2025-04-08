@@ -2,7 +2,7 @@
 
 import { Column } from '@tanstack/table-core';
 import { FC } from 'react';
-import { Button } from '@nextui-org/react';
+import { Button } from '@heroui/button';
 
 /**
  * Reset column filter

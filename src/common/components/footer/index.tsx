@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { Button, Link } from '@nextui-org/react';
+import { Button } from '@heroui/button';
+import { Link } from '@heroui/link';
 
 import { githubURL } from '@/common/constants';
 

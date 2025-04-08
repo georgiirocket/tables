@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { FaMinusSquare } from 'react-icons/fa';
 import { MdLibraryAddCheck } from 'react-icons/md';
-import { Button } from '@nextui-org/react';
+import { Button } from '@heroui/button';
 import { Column } from '@tanstack/table-core';
 
 interface IContainButton {

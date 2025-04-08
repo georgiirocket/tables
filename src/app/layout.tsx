@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import { FC, PropsWithChildren } from 'react';
-import { NextUIProvider } from '@nextui-org/system';
+import { HeroUIProvider } from '@heroui/system';
 
 import { meta } from '@/common/constants/meta';
 import Header from '@/common/components/header';
@@ -20,11 +20,11 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
-        <NextUIProvider className="size-full grid grid-rows-[auto_1fr_auto] grid-cols-[1fr]">
+        <HeroUIProvider className="size-full grid grid-rows-[auto_1fr_auto] grid-cols-[1fr]">
           <Header />
           {children}
           <Footer />
-        </NextUIProvider>
+        </HeroUIProvider>
       </body>
     </html>
   );

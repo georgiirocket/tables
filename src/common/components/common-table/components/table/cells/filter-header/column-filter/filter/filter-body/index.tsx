@@ -2,7 +2,7 @@
 
 import { Column } from '@tanstack/table-core';
 import { FC } from 'react';
-import { Divider } from '@nextui-org/react';
+import { Divider } from '@heroui/divider';
 
 import ResetButton from './reset-button';
 import FilterTable from './filter-table';

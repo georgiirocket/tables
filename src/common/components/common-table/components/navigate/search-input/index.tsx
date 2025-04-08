@@ -1,8 +1,8 @@
 'use client';
 
 import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react';
-import { Input } from '@nextui-org/react';
-import { debounce } from 'lodash';
+import { Input } from '@heroui/input';
+import debounce from 'lodash/debounce';
 import { FaSearch } from 'react-icons/fa';
 
 import { useTableContext } from '@/common/components/common-table/providers';

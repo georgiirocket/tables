@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { CellContext } from '@tanstack/table-core';
-import { Image } from '@nextui-org/react';
+import { Image } from '@heroui/image';
 
 /**
  * Image cell

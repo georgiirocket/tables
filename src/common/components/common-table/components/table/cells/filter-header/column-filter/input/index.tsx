@@ -2,7 +2,8 @@
 
 import { Column } from '@tanstack/table-core';
 import { FC } from 'react';
-import { Input, Tooltip } from '@nextui-org/react';
+import { Input } from '@heroui/input';
+import { Tooltip } from '@heroui/tooltip';
 
 /**
  * Column filter

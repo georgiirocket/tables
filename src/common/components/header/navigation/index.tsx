@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { Button } from '@nextui-org/react';
+import { Button } from '@heroui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
