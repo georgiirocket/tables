@@ -13,7 +13,7 @@ Feel free to copy, add and use this
 ## Tools used
 
 -  Next.js
--  Next UI
+-  Hero UI
 -  TanStack Table
 -  Tailwind
 -  Dexie
@@ -107,5 +107,5 @@ const BaseTable: FC = () => {
 
 ## Node version
 
-- node - 20.16.0
-- npm - 10.8.1
+- node - 22.13.0
+- npm - 10.9.2
