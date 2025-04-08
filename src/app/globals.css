@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ui-bg: #18181B;
+  --main-background: #0f0f11;
+  --text-color: #fbfbfb;
+  --gray-color: #888;
+  --gray-hover-color: #555;
+  --svg-color: #fbfbfb;
+  --table-bg: #18181b;
+  --table-header: #27272a;
+  --common-hover: #3f3f45;
+}
+
+@layer components {
+  .input-number {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .scroll-hidden {
+    scrollbar-width: none;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .scroll-bar-2 {
+    /* width */
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+  }
+
+  .scroll-bar-height-4 {
+    /* height */
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+  }
+
+  .main-container {
+    @apply w-full max-w-[1200px] mx-auto py-2 sm:py-10 px-2 overflow-auto;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  background: var(--main-background);
+}
+
+body {
+  color: var(--text-color);
+  height: 100dvh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  color: var(--svg-color);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-background);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gray-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-hover-color);
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
