@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
-import { HeaderContext } from '@tanstack/table-core';
+import { FC } from 'react'
+import { HeaderContext } from '@tanstack/table-core'
 
-import ColumnFilter from './column-filter';
+import ColumnFilter from './column-filter'
 
 /**
  * Filter header cell
@@ -11,7 +11,7 @@ import ColumnFilter from './column-filter';
  * @constructor
  */
 const FilterHeaderCell: FC<HeaderContext<any, any>> = (context) => {
-  return <ColumnFilter header={context.header} />;
-};
+  return <ColumnFilter header={context.header} />
+}
 
-export default FilterHeaderCell;
+export default FilterHeaderCell

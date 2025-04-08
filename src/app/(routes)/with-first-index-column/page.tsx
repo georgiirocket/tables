@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Metadata } from 'next';
+import { FC } from 'react'
+import { Metadata } from 'next'
 
-import WithFirstIndexColumnTable from './_components/with-first-index-column';
+import WithFirstIndexColumnTable from './_components/with-first-index-column'
 
 export const metadata: Metadata = {
   title: 'With first index column | Tables, TanStack Table',
-};
+}
 
 /**
  * Page
@@ -16,7 +16,7 @@ const Page: FC = () => {
     <main className="main-container">
       <WithFirstIndexColumnTable />
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

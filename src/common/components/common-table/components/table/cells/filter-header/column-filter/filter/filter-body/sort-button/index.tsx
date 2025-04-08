@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
-import { BiSortAZ } from 'react-icons/bi';
-import { BiSortZA } from 'react-icons/bi';
-import { Button } from '@heroui/button';
+import { FC } from 'react'
+import { BiSortAZ } from 'react-icons/bi'
+import { BiSortZA } from 'react-icons/bi'
+import { Button } from '@heroui/button'
 
 interface ISortButton {
-  sortMode: 'asc' | 'desc';
-  onToggleSort: () => void;
+  sortMode: 'asc' | 'desc'
+  onToggleSort: () => void
 }
 
 /**
@@ -17,12 +17,12 @@ const SortButton: FC<ISortButton> = ({ sortMode, onToggleSort }) => {
   return (
     <Button isIconOnly size="sm" onPress={onToggleSort} className="w-full">
       {sortMode === 'asc' ? (
-        <BiSortAZ className="w-[20px] h-[20px]" />
+        <BiSortAZ className="h-[20px] w-[20px]" />
       ) : (
-        <BiSortZA className="w-[20px] h-[20px]" />
+        <BiSortZA className="h-[20px] w-[20px]" />
       )}
     </Button>
-  );
-};
+  )
+}
 
-export default SortButton;
+export default SortButton

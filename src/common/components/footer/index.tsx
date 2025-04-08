@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import { FaGithub } from 'react-icons/fa';
-import { Button } from '@heroui/button';
-import { Link } from '@heroui/link';
+import { FC } from 'react'
+import { FaGithub } from 'react-icons/fa'
+import { Button } from '@heroui/button'
+import { Link } from '@heroui/link'
 
-import { githubURL } from '@/common/constants';
+import { githubURL } from '@/common/constants'
 
 /**
  * Footer component
@@ -11,7 +11,7 @@ import { githubURL } from '@/common/constants';
  */
 const Footer: FC = () => {
   return (
-    <footer className="w-full pb-4 p-2 grid place-items-center">
+    <footer className="grid w-full place-items-center p-2 pb-4">
       <Button
         as={Link}
         href={githubURL}
@@ -20,12 +20,12 @@ const Footer: FC = () => {
         size="sm"
         isExternal
         startContent={<FaGithub />}
-        className="text-fill-inherit flex gap-1 items-center cursor-pointer"
+        className="flex cursor-pointer items-center gap-1 text-fill-inherit"
       >
         Github
       </Button>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

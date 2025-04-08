@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Metadata } from 'next';
+import { FC } from 'react'
+import { Metadata } from 'next'
 
-import ManyEntitiesTable from './_components/many-entities';
+import ManyEntitiesTable from './_components/many-entities'
 
 export const metadata: Metadata = {
   title: 'Many Entities | Tables, TanStack Table',
-};
+}
 
 /**
  * Page
@@ -16,7 +16,7 @@ const Page: FC = () => {
     <main className="main-container">
       <ManyEntitiesTable />
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

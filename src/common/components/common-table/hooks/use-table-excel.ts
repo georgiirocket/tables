@@ -1,12 +1,12 @@
-import { Column, Table } from '@tanstack/table-core';
-import writeXlsxFile, { Row } from 'write-excel-file';
-import { round } from 'lodash';
-import { useCallback } from 'react';
+import { Column, Table } from '@tanstack/table-core'
+import writeXlsxFile, { Row } from 'write-excel-file'
+import { round } from 'lodash'
+import { useCallback } from 'react'
 
 interface IHeader {
-  id: string;
-  header: string;
-  size: number;
+  id: string
+  header: string
+  size: number
 }
 
 /**
@@ -21,50 +21,51 @@ const useTableExcel = (table: Table<any>, name: string | (() => string)) => {
     const {
       id,
       columnDef: { header, meta, size },
-    } = column;
+    } = column
 
     return {
       id,
-      header: typeof header === 'string' ? header : (meta?.headerName ?? 'Unknown'),
+      header:
+        typeof header === 'string' ? header : (meta?.headerName ?? 'Unknown'),
       size: size ? round(size / 8) : 10,
-    };
-  };
+    }
+  }
 
   /**
    * Create excel data
    */
   const createExcel = useCallback(async (): Promise<void> => {
     try {
-      const { rows } = table.getRowModel();
-      const columns = table.getVisibleLeafColumns();
+      const { rows } = table.getRowModel()
+      const columns = table.getVisibleLeafColumns()
 
       const headers: IHeader[] = columns
         .filter((column) => column.columnDef.meta?.isDownloadExcel)
-        .map(createHeaderEntity);
+        .map(createHeaderEntity)
 
       const data = rows.reduce((acc, { getValue }) => {
         const row: Row = headers.map(({ id }) => {
-          const value = getValue(id);
+          const value = getValue(id)
 
           switch (typeof value) {
             case 'number':
-              return { type: Number, value };
+              return { type: Number, value }
 
             case 'boolean':
-              return { type: Boolean, value };
+              return { type: Boolean, value }
 
             default:
-              return { type: String, value: String(value) };
+              return { type: String, value: String(value) }
           }
-        });
+        })
 
-        return [...acc, row];
-      }, [] as any);
+        return [...acc, row]
+      }, [] as any)
 
       const headerRow: Row = headers.map(({ header }) => ({
         value: header,
         fontWeight: 'bold',
-      }));
+      }))
 
       await writeXlsxFile([headerRow, ...data], {
         fileName: `${typeof name === 'function' ? name() : name}.xlsx`,
@@ -73,13 +74,13 @@ const useTableExcel = (table: Table<any>, name: string | (() => string)) => {
         columns: headers.map(({ size }) => ({
           width: size,
         })),
-      });
+      })
     } catch (e) {
-      console.error((e as Error).message);
+      console.error((e as Error).message)
     }
-  }, []);
+  }, [])
 
-  return { createExcel };
-};
+  return { createExcel }
+}
 
-export default useTableExcel;
+export default useTableExcel

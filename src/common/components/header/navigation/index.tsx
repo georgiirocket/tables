@@ -1,21 +1,21 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
-import { Button } from '@heroui/button';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { FC } from 'react'
+import { Button } from '@heroui/button'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
-import { routes } from '@/common/constants/routes';
+import { routes } from '@/common/constants/routes'
 
 /**
  * Navigation
  * @constructor
  */
 const Navigation: FC = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
-    <nav className="max-w-[1200px] flex flex-wrap gap-1 mx-auto justify-center">
+    <nav className="mx-auto flex max-w-[1200px] flex-wrap justify-center gap-1">
       {routes.map(({ path, name }) => (
         <Button
           size="sm"
@@ -29,7 +29,7 @@ const Navigation: FC = () => {
         </Button>
       ))}
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

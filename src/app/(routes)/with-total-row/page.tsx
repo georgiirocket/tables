@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Metadata } from 'next';
+import { FC } from 'react'
+import { Metadata } from 'next'
 
-import WithTotalRowTable from './_components/with-total-row';
+import WithTotalRowTable from './_components/with-total-row'
 
 export const metadata: Metadata = {
   title: 'With Total Row | Tables, TanStack Table',
-};
+}
 
 /**
  * Page
@@ -16,7 +16,7 @@ const Page: FC = () => {
     <main className="main-container">
       <WithTotalRowTable />
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

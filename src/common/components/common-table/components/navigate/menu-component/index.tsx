@@ -1,21 +1,21 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
+import { FC } from 'react'
 
-import { useTableContext } from '@/common/components/common-table/providers';
+import { useTableContext } from '@/common/components/common-table/providers'
 
 /**
  * Menu component
  * @constructor
  */
 const MenuComponent: FC = () => {
-  const { components, table } = useTableContext();
+  const { components, table } = useTableContext()
 
   if (!components?.menu) {
-    return null;
+    return null
   }
 
-  return <components.menu table={table} />;
-};
+  return <components.menu table={table} />
+}
 
-export default MenuComponent;
+export default MenuComponent

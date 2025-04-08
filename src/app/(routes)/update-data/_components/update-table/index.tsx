@@ -1,27 +1,33 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
+import { FC } from 'react'
 import {
   getCoreRowModel,
   getSortedRowModel,
   getFilteredRowModel,
   getFacetedRowModel,
   getFacetedUniqueValues,
-} from '@tanstack/table-core';
-import { useReactTable } from '@tanstack/react-table';
+} from '@tanstack/table-core'
+import { useReactTable } from '@tanstack/react-table'
 
-import CommonTable from '@/common/components/common-table';
-import { baseFiltersStore, dataStore } from '@/common/stores';
+import CommonTable from '@/common/components/common-table'
+import { baseFiltersStore, dataStore } from '@/common/stores'
 
-import { columData } from './data';
+import { columData } from './data'
 
 /**
  * Update table component
  */
 const UpdateTable: FC = () => {
-  const { updateTableEntities, updateData } = dataStore((state) => state);
-  const { sorting, setSorting, globalFilter, setGlobalFilter, columnFilters, setColumnFilters } =
-    baseFiltersStore((state) => state);
+  const { updateTableEntities, updateData } = dataStore((state) => state)
+  const {
+    sorting,
+    setSorting,
+    globalFilter,
+    setGlobalFilter,
+    columnFilters,
+    setColumnFilters,
+  } = baseFiltersStore((state) => state)
 
   const table = useReactTable({
     data: updateTableEntities,
@@ -38,9 +44,9 @@ const UpdateTable: FC = () => {
     onSortingChange: setSorting,
     state: { globalFilter, columnFilters, sorting },
     getRowId: (item) => String(item.id),
-  });
+  })
 
-  return <CommonTable table={table} methods={{ onUpdateData: updateData }} />;
-};
+  return <CommonTable table={table} methods={{ onUpdateData: updateData }} />
+}
 
-export default UpdateTable;
+export default UpdateTable

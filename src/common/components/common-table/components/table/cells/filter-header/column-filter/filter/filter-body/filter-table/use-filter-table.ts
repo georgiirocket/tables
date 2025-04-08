@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import { useMemo } from 'react';
-import { getCoreRowModel } from '@tanstack/table-core';
-import { useReactTable } from '@tanstack/react-table';
+import { useMemo } from 'react'
+import { getCoreRowModel } from '@tanstack/table-core'
+import { useReactTable } from '@tanstack/react-table'
 
-import useTableVirtualizer from '@/common/components/common-table/hooks/use-table-virtualizer';
+import useTableVirtualizer from '@/common/components/common-table/hooks/use-table-virtualizer'
 
 export interface IDataValue {
-  key: string;
+  key: string
 }
 
 /**
@@ -15,32 +15,32 @@ export interface IDataValue {
  * For virtual filter items
  */
 export const createFilterData = (data: string[]): IDataValue[] => {
-  return data.map((item) => ({ key: item }));
-};
+  return data.map((item) => ({ key: item }))
+}
 
 const column = {
   accessorKey: 'key',
-};
+}
 
 /**
  * Filter virtualizer
  */
 const useFilterTable = (preData: string[]) => {
-  const data = useMemo(() => createFilterData(preData), [preData]);
+  const data = useMemo(() => createFilterData(preData), [preData])
 
   const table = useReactTable({
     data: data,
     columns: [column],
     getCoreRowModel: getCoreRowModel(),
-  });
+  })
 
   const { tableRef, rowVirtualizer } = useTableVirtualizer({
     table: table as never,
     estimateSize: 30,
     staticHeight: 30,
-  });
+  })
 
-  return { table, tableRef, rowVirtualizer };
-};
+  return { table, tableRef, rowVirtualizer }
+}
 
-export default useFilterTable;
+export default useFilterTable

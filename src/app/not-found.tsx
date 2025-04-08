@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
 /**
  * Not found page
@@ -7,9 +7,9 @@ import { FC } from 'react';
 const NotFound: FC = () => {
   return (
     <main className="main-container grid place-items-center">
-      <h1 className="text-[20px] sm:text-[40px] pb-16 ">Page not found</h1>
+      <h1 className="pb-16 text-[20px] sm:text-[40px]">Page not found</h1>
     </main>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

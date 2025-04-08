@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
-import { MdUpdate } from 'react-icons/md';
-import { ImMenu2 } from 'react-icons/im';
+import { ReactNode } from 'react'
+import { MdUpdate } from 'react-icons/md'
+import { ImMenu2 } from 'react-icons/im'
 
 export interface IRoute {
-  path: string;
-  name: string;
-  description?: string | ReactNode;
+  path: string
+  name: string
+  description?: string | ReactNode
 }
 
 /**
@@ -37,7 +37,7 @@ export const routes: IRoute[] = [
     name: 'With menu',
     description: (
       <span>
-        With menu. Press <ImMenu2 className="size-[20px] inline" />
+        With menu. Press <ImMenu2 className="inline size-[20px]" />
       </span>
     ),
   },
@@ -46,7 +46,7 @@ export const routes: IRoute[] = [
     name: 'Update data',
     description: (
       <span>
-        Update data. Press <MdUpdate className="size-[20px] inline" />
+        Update data. Press <MdUpdate className="inline size-[20px]" />
       </span>
     ),
   },
@@ -60,4 +60,4 @@ export const routes: IRoute[] = [
     name: 'Full',
     description: 'Full functionally',
   },
-];
+]

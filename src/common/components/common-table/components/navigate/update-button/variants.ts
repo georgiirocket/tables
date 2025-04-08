@@ -1,4 +1,4 @@
-import { Variants } from 'framer-motion';
+import { Variants } from 'framer-motion'
 
 /**
  * Variants
@@ -6,4 +6,4 @@ import { Variants } from 'framer-motion';
 export const variants: Variants = {
   init: { rotate: 0 },
   animate: { rotate: 360, transition: { repeat: Infinity } },
-};
+}

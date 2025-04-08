@@ -1,4 +1,4 @@
-import { Variants } from 'framer-motion';
+import { Variants } from 'framer-motion'
 
 /**
  * Variants
@@ -10,4 +10,4 @@ export const variants: Variants = {
   onscreen: {
     opacity: 1,
   },
-};
+}

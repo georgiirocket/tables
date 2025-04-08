@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
-import { HeaderContext } from '@tanstack/table-core';
+import { FC } from 'react'
+import { HeaderContext } from '@tanstack/table-core'
 
 /**
  * Filter header cell
@@ -9,10 +9,10 @@ import { HeaderContext } from '@tanstack/table-core';
  */
 const CountHeaderCell: FC<HeaderContext<any, any>> = () => {
   return (
-    <div className="w-[100px] pl-[0.5rem] sticky left-0 to-0 bg-table-header-color z-20 flex items-center">
+    <div className="to-0 sticky left-0 z-20 flex w-[100px] items-center bg-table-header-color pl-[0.5rem]">
       #
     </div>
-  );
-};
+  )
+}
 
-export default CountHeaderCell;
+export default CountHeaderCell

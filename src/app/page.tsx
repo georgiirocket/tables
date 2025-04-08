@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
-import BaseTable from './_components/base-table';
+import BaseTable from './_components/base-table'
 
 /**
  * Page
@@ -11,7 +11,7 @@ const Page: FC = () => {
     <main className="main-container">
       <BaseTable />
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

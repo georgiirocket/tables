@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Metadata } from 'next';
+import { FC } from 'react'
+import { Metadata } from 'next'
 
-import BaseTable from './_components/update-table';
+import BaseTable from './_components/update-table'
 
 export const metadata: Metadata = {
   title: 'Update Data | Tables, TanStack Table',
-};
+}
 
 /**
  * Page
@@ -16,7 +16,7 @@ const Page: FC = () => {
     <main className="main-container">
       <BaseTable />
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

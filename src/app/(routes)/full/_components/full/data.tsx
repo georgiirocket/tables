@@ -1,14 +1,14 @@
-import { ColumnDef } from '@tanstack/table-core';
+import { ColumnDef } from '@tanstack/table-core'
 
-import { columnFilterFn } from '@/common/components/common-table/helpers/excel-filters';
-import { IEntity } from '@/common/stores/data';
-import FilterHeaderCell from '@/common/components/common-table/components/table/cells/filter-header/incex';
-import ImageCell from '@/common/components/common-table/components/table/cells/image-cell/incex';
-import DescriptionCell from '@/common/components/common-table/components/table/cells/description-cell/incex';
-import CountHeaderCell from '@/common/components/common-table/components/table/cells/count-header/incex';
-import CountCell from '@/common/components/common-table/components/table/cells/count-cell/incex';
+import { columnFilterFn } from '@/common/components/common-table/helpers/excel-filters'
+import { IEntity } from '@/common/stores/data'
+import FilterHeaderCell from '@/common/components/common-table/components/table/cells/filter-header/incex'
+import ImageCell from '@/common/components/common-table/components/table/cells/image-cell/incex'
+import DescriptionCell from '@/common/components/common-table/components/table/cells/description-cell/incex'
+import CountHeaderCell from '@/common/components/common-table/components/table/cells/count-header/incex'
+import CountCell from '@/common/components/common-table/components/table/cells/count-cell/incex'
 
-export type IColumn = ColumnDef<IEntity>[];
+export type IColumn = ColumnDef<IEntity>[]
 
 export const columData: IColumn = [
   {
@@ -53,4 +53,4 @@ export const columData: IColumn = [
     size: 150,
     meta: { headerName: 'Category', isDownloadExcel: true },
   },
-];
+]

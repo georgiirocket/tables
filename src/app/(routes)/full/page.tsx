@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Metadata } from 'next';
+import { FC } from 'react'
+import { Metadata } from 'next'
 
-import FullTable from './_components/full';
+import FullTable from './_components/full'
 
 export const metadata: Metadata = {
   title: 'Full | Tables, TanStack Table',
-};
+}
 
 /**
  * Page
@@ -16,7 +16,7 @@ const Page: FC = () => {
     <main className="main-container">
       <FullTable />
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

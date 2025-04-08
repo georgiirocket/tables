@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
 /**
  * Meta
@@ -9,4 +9,4 @@ export const meta: Metadata = {
   openGraph: {
     images: '/og-image.jpg',
   },
-};
+}

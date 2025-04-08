@@ -1,27 +1,27 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
-import { usePathname } from 'next/navigation';
+import { FC } from 'react'
+import { usePathname } from 'next/navigation'
 
-import { routes } from '@/common/constants/routes';
+import { routes } from '@/common/constants/routes'
 
 /**
  * Description
  * @constructor
  */
 const Description: FC = () => {
-  const pathname = usePathname();
-  const route = routes.find(({ path }) => path === pathname);
+  const pathname = usePathname()
+  const route = routes.find(({ path }) => path === pathname)
 
   if (!route) {
-    return null;
+    return null
   }
 
   return (
-    <div className="max-w-[1200px] mx-auto mt-3">
+    <div className="mx-auto mt-3 max-w-[1200px]">
       <p className="italic">{route?.description ?? ''}</p>
     </div>
-  );
-};
+  )
+}
 
-export default Description;
+export default Description

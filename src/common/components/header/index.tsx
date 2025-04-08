@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import { Image } from '@heroui/image';
+import { FC } from 'react'
+import { Image } from '@heroui/image'
 
-import Navigation from './navigation';
-import Description from './description';
+import Navigation from './navigation'
+import Description from './description'
 
 /**
  * Header component
@@ -10,8 +10,8 @@ import Description from './description';
  */
 const Header: FC = () => {
   return (
-    <header className="w-full py-4 px-1 flex flex-col gap-2">
-      <div className="flex justify-center items-center gap-2">
+    <header className="flex w-full flex-col gap-2 px-1 py-4">
+      <div className="flex items-center justify-center gap-2">
         <Image
           alt="nextui logo"
           radius="sm"
@@ -23,7 +23,7 @@ const Header: FC = () => {
       <Navigation />
       <Description />
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -1,37 +1,37 @@
-'use client';
+'use client'
 
-import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react';
-import { Input } from '@heroui/input';
-import debounce from 'lodash/debounce';
-import { FaSearch } from 'react-icons/fa';
+import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react'
+import { Input } from '@heroui/input'
+import debounce from 'lodash/debounce'
+import { FaSearch } from 'react-icons/fa'
 
-import { useTableContext } from '@/common/components/common-table/providers';
+import { useTableContext } from '@/common/components/common-table/providers'
 
 /**
  * Search input component
  */
 const SearchInput: FC<PropsWithChildren> = () => {
-  const { table } = useTableContext();
-  const state = table.getState();
-  const [inputValue, setInputValue] = useState(state.globalFilter);
+  const { table } = useTableContext()
+  const state = table.getState()
+  const [inputValue, setInputValue] = useState(state.globalFilter)
 
   const debounceFn = useCallback(
     debounce((value: string) => {
-      table.setGlobalFilter(value);
+      table.setGlobalFilter(value)
     }, 1000),
     [table],
-  );
+  )
 
   const handleChange = (value: string): void => {
-    debounceFn(value);
-    setInputValue(value);
-  };
+    debounceFn(value)
+    setInputValue(value)
+  }
 
   useEffect(() => {
     if (!state.globalFilter) {
-      setInputValue('');
+      setInputValue('')
     }
-  }, [state.globalFilter]);
+  }, [state.globalFilter])
 
   return (
     <Input
@@ -44,7 +44,7 @@ const SearchInput: FC<PropsWithChildren> = () => {
       startContent={<FaSearch />}
       size="sm"
     />
-  );
-};
+  )
+}
 
-export default SearchInput;
+export default SearchInput

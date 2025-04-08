@@ -1,35 +1,41 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
+import { FC } from 'react'
 import {
   getCoreRowModel,
   getSortedRowModel,
   getFilteredRowModel,
   getFacetedRowModel,
   getFacetedUniqueValues,
-} from '@tanstack/table-core';
-import { useReactTable } from '@tanstack/react-table';
+} from '@tanstack/table-core'
+import { useReactTable } from '@tanstack/react-table'
 
-import CommonTable from '@/common/components/common-table';
-import { baseFiltersStore, dataStore } from '@/common/stores';
+import CommonTable from '@/common/components/common-table'
+import { baseFiltersStore, dataStore } from '@/common/stores'
 
-import { columData } from './data';
+import { columData } from './data'
 
 /**
  * With index db table component
  */
 const WithFirstIndexColumnTable: FC = () => {
-  const { baseEntities } = dataStore((state) => state);
-  const { sorting, setSorting, globalFilter, setGlobalFilter, columnFilters, setColumnFilters } =
-    baseFiltersStore((state) => state);
+  const { baseEntities } = dataStore((state) => state)
+  const {
+    sorting,
+    setSorting,
+    globalFilter,
+    setGlobalFilter,
+    columnFilters,
+    setColumnFilters,
+  } = baseFiltersStore((state) => state)
 
   /**
    * On row click
    * @param id
    */
   const onRowClick = (id: string): void => {
-    alert(`Row id: ${id}`);
-  };
+    alert(`Row id: ${id}`)
+  }
 
   const table = useReactTable({
     data: baseEntities,
@@ -46,9 +52,9 @@ const WithFirstIndexColumnTable: FC = () => {
     onSortingChange: setSorting,
     state: { globalFilter, columnFilters, sorting },
     getRowId: (item) => String(item.id),
-  });
+  })
 
-  return <CommonTable table={table} methods={{ onRowClick }} />;
-};
+  return <CommonTable table={table} methods={{ onRowClick }} />
+}
 
-export default WithFirstIndexColumnTable;
+export default WithFirstIndexColumnTable

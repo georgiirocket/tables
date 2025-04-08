@@ -1,34 +1,38 @@
-import Dexie, { Table } from 'dexie';
-import { VisibilityState, ColumnOrderState, ColumnSizingState } from '@tanstack/table-core';
+import Dexie, { Table } from 'dexie'
+import {
+  VisibilityState,
+  ColumnOrderState,
+  ColumnSizingState,
+} from '@tanstack/table-core'
 
 interface ISettingsData {
-  id?: string;
-  data?: VisibilityState;
+  id?: string
+  data?: VisibilityState
 }
 
 interface ISettingsOrderData {
-  id?: string;
-  data?: ColumnOrderState;
+  id?: string
+  data?: ColumnOrderState
 }
 
 interface ISettingsColumnSizingData {
-  id?: string;
-  data?: ColumnSizingState;
+  id?: string
+  data?: ColumnSizingState
 }
 
 export class SettingsTable extends Dexie {
-  settings!: Table<ISettingsData, string>;
-  settingsOrder!: Table<ISettingsOrderData, string>;
-  settingsSizing!: Table<ISettingsColumnSizingData, string>;
+  settings!: Table<ISettingsData, string>
+  settingsOrder!: Table<ISettingsOrderData, string>
+  settingsSizing!: Table<ISettingsColumnSizingData, string>
 
   constructor() {
-    super('settings-table');
+    super('settings-table')
     this.version(1).stores({
       settings: 'id',
       settingsOrder: 'id',
       settingsSizing: 'id',
-    });
+    })
   }
 }
 
-export const settingTableDb = new SettingsTable();
+export const settingTableDb = new SettingsTable()

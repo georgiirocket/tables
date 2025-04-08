@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { Column } from '@tanstack/table-core';
-import { FC } from 'react';
-import { Card, CardBody } from '@heroui/card';
-import { Popover, PopoverTrigger, PopoverContent } from '@heroui/popover';
+import { Column } from '@tanstack/table-core'
+import { FC } from 'react'
+import { Card, CardBody } from '@heroui/card'
+import { Popover, PopoverTrigger, PopoverContent } from '@heroui/popover'
 
-import FilterBody from './filter-body';
-import FilterButton from './filter-button';
+import FilterBody from './filter-body'
+import FilterButton from './filter-button'
 
 /**
  * Sorted button
@@ -27,7 +27,7 @@ const Filter: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
         </Card>
       </PopoverContent>
     </Popover>
-  );
-};
+  )
+}
 
-export default Filter;
+export default Filter

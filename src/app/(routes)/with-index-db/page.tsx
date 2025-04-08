@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Metadata } from 'next';
+import { FC } from 'react'
+import { Metadata } from 'next'
 
-import WithIndexDbTable from './_components/with-index-db-table';
+import WithIndexDbTable from './_components/with-index-db-table'
 
 export const metadata: Metadata = {
   title: 'With index db | Tables, TanStack Table',
-};
+}
 
 /**
  * Page
@@ -16,7 +16,7 @@ const Page: FC = () => {
     <main className="main-container">
       <WithIndexDbTable />
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
