@@ -27,6 +27,8 @@ const ResizeColumn: FC<{ header: Header<unknown, unknown> }> = ({ header }) => {
       `[data-header-table-id="${header.id}"]`,
     )
 
+    console.log(element)
+
     if (!element) {
       return
     }

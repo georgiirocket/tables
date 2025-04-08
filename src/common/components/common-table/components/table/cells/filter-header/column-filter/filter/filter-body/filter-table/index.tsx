@@ -67,7 +67,7 @@ const FilterColumnTable: FC<IFilterTable> = ({
                 return (
                   <div
                     key={cell.id}
-                    className="grid h-[30px] w-full grid-cols-[auto_1fr] items-center"
+                    className="grid h-[30px] w-full grid-cols-[auto_1fr] items-center gap-2"
                   >
                     <Switch
                       id={cell.id}

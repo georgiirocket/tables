@@ -27,6 +27,7 @@ const TableHeader: FC = () => {
             {headerGroup.headers.map((header) => (
               <div
                 key={header.id}
+                data-header-table-id={header.id}
                 className="flex flex-1 flex-col gap-[5px]"
                 style={{ minWidth: header.getSize() }}
               >

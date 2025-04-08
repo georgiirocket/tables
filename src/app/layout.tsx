@@ -20,7 +20,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
     <html lang="en" className="dark">
       <body className={inter.className}>
         <UiProvider>
-          <div className="grid size-full grid-cols-[1fr] grid-rows-[auto_1fr_auto]">
+          <div className="grid h-dvh w-dvw grid-cols-[1fr] grid-rows-[auto_1fr_auto]">
             <Header />
             {children}
             <Footer />
