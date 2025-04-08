@@ -16,7 +16,7 @@ const ResetButton: FC<{ column: Column<unknown, unknown> }> = ({ column }) => {
   };
 
   return (
-    <Button size="sm" color="primary" onClick={handleReset}>
+    <Button size="sm" color="primary" onPress={handleReset}>
       Reset
     </Button>
   );

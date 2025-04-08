@@ -36,10 +36,10 @@ const AllSelectButtons: FC<IContainButton> = ({ column, sortedUniqueValues }) =>
 
   return (
     <>
-      <Button isIconOnly size="sm" className="w-full" onClick={handleAddValues}>
+      <Button isIconOnly size="sm" className="w-full" onPress={handleAddValues}>
         <MdLibraryAddCheck className="w-[20px] h-[20px]" />
       </Button>
-      <Button isIconOnly size="sm" className="w-full" onClick={handleReset}>
+      <Button isIconOnly size="sm" className="w-full" onPress={handleReset}>
         <FaMinusSquare className="w-[20px] h-[20px]" />
       </Button>
     </>

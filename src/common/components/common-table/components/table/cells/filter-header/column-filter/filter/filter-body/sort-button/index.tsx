@@ -15,7 +15,7 @@ interface ISortButton {
  */
 const SortButton: FC<ISortButton> = ({ sortMode, onToggleSort }) => {
   return (
-    <Button isIconOnly size="sm" onClick={onToggleSort} className="w-full">
+    <Button isIconOnly size="sm" onPress={onToggleSort} className="w-full">
       {sortMode === 'asc' ? (
         <BiSortAZ className="w-[20px] h-[20px]" />
       ) : (

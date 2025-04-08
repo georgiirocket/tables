@@ -15,7 +15,7 @@ interface IContainButton {
  */
 const ContainButton: FC<IContainButton> = ({ containMode, onToggleContain }) => {
   return (
-    <Button isIconOnly size="sm" onClick={onToggleContain} className="w-full">
+    <Button isIconOnly size="sm" onPress={onToggleContain} className="w-full">
       {containMode === 'startWith' ? (
         <MdOutlineAlignHorizontalLeft className="w-[20px] h-[20px]" />
       ) : (
