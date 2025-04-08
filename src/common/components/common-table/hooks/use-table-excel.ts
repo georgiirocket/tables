@@ -1,5 +1,5 @@
 import { Column, Table } from '@tanstack/table-core';
-import writeXlsxFile, { Row_ } from 'write-excel-file';
+import writeXlsxFile, { Row } from 'write-excel-file';
 import { round } from 'lodash';
 import { useCallback } from 'react';
 
@@ -43,7 +43,7 @@ const useTableExcel = (table: Table<any>, name: string | (() => string)) => {
         .map(createHeaderEntity);
 
       const data = rows.reduce((acc, { getValue }) => {
-        const row: Row_<any> = headers.map(({ id }) => {
+        const row: Row = headers.map(({ id }) => {
           const value = getValue(id);
 
           switch (typeof value) {
@@ -61,7 +61,7 @@ const useTableExcel = (table: Table<any>, name: string | (() => string)) => {
         return [...acc, row];
       }, [] as any);
 
-      const headerRow: Row_<any> = headers.map(({ header }) => ({
+      const headerRow: Row = headers.map(({ header }) => ({
         value: header,
         fontWeight: 'bold',
       }));
